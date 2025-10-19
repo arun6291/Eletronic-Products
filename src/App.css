@@ -1,8 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: block; /* ✅ default normal flow */
+  overflow-x: hidden; /* ✅ no horizontal scroll */
+  font-family: "Roboto", sans-serif; /* optional */
+  background-color: #fff; /* or your theme color */
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
 
 .logo {
