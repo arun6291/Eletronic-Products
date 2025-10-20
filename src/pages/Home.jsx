@@ -1,13 +1,22 @@
-import Header from "../components/Header/Header";
-import SimpleSlider from "../components/BodySection/HomeSlider/Slider";
+import React from "react";
+import Header from "../components/Header/Header";  
+import HeroSlider from "../components/BodySection/HeroSlider";
+import FeaturedProduct from '../components/BodySection/FeaturedProducts';
+import ProductTabsGrid from '../components/BodySection/ProductsTabGrid';
+import Advantages from "../components/BodySection/Advantages";
+import Footer from '../components/Footer'  
+
 // import Footer from "../components/Footer/Footer";
 
 function HomePage() {
     return (
         <div>
-            <Header/>
-            <SimpleSlider />
-            {/* <Footer /> */}
+            <Header/> 
+            <HeroSlider />
+            <FeaturedProduct/>
+            <ProductTabsGrid/> 
+            <Advantages/> 
+            <Footer/>
         </div>
     )
 }

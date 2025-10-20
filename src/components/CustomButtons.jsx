@@ -2,9 +2,9 @@ import React from 'react';
 import Button from '@mui/material/Button';
 
 
-const CustomButton = ({label, onClick, variant = 'default'}) => {
+const CustomButton = ({ label, onClick, variant = 'default' }) => {
     const getColor = () => {
-        switch(variant) {
+        switch (variant) {
             case 'Shop Now':
                 return 'Primary';
             case 'Add To Cart':
@@ -13,17 +13,28 @@ const CustomButton = ({label, onClick, variant = 'default'}) => {
                 return 'success';
             case 'Checkout':
                 return 'error';
+            case 'Sign Up':   // add your Signup case
+                return 'primary';
             default:
                 return 'info';
         }
     };
 
-    return(
+    return (
         <Button
             variant='contained'
-            color= {getColor()}
+            color={getColor()}
             onClick={onclick}
-            sx = {{borderRadius: 2, padding: '8px 20px', fontWeight: 600}}
+            sx={{
+                backgroundColor: "#d00404",
+                borderRadius: 1,
+                padding: '8px 20px', 
+                color: '#fff',
+                textTransform: "none",
+                "&:hover": {
+                    backgroundColor: "#a00303",
+                },
+            }}
         >
             {label}
         </Button>
