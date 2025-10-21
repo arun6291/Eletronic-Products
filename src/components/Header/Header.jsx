@@ -15,6 +15,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from "@mui/icons-material/Close";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { CartContext } from '../../context/CartContext';
+import { useNavigate } from "react-router-dom";
 import SignupForm from "./SignUp";
 import { Link } from "react-router-dom"; // Import Link
 
@@ -28,6 +29,7 @@ function Header() {
     // close modal
     const handleClose = () => setOpen(false);
 
+    const navigate = useNavigate();
     const { cartItems } = useContext(CartContext);
     const itemCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
@@ -47,8 +49,13 @@ function Header() {
                     <IconButton size="large" aria-label="search" color="inherit">
                         <SearchIcon />
                     </IconButton>
-                    {/* ✅ Dynamic cart badge */}
-                    <IconButton size="large" aria-label="cart" color="inherit">
+                     {/* Cart Button with Navigation */}
+                    <IconButton
+                        size="large"
+                        aria-label="cart"
+                        color="inherit"
+                        onClick={() => navigate("/order-summary")}
+                    >
                         <Badge badgeContent={itemCount} color="error">
                             <ShoppingCartIcon />
                         </Badge>

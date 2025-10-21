@@ -5,7 +5,7 @@ import FeaturedProduct from '../components/BodySection/FeaturedProducts';
 import ProductTabsGrid from '../components/BodySection/ProductsTabGrid';
 import Advantages from "../components/BodySection/Advantages";
 import Footer from '../components/Footer'  
-import ProductDetailPage from "../context/ProductDetailPage";
+import OrderSummaryPage from "../context/OrderSummaryPage";
 
 // import Footer from "../components/Footer/Footer";
 
@@ -16,8 +16,7 @@ function HomePage() {
             <HeroSlider />
             <FeaturedProduct/>
             <ProductTabsGrid/> 
-            <Advantages/> 
-            <ProductDetailPage/>
+            <Advantages/>  
             <Footer/>
         </div>
     )
