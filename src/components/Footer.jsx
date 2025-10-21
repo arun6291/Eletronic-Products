@@ -11,19 +11,16 @@ function Footer() {
     <Box
       component="footer"
       sx={{
-        backgroundColor: "#0f172a",
-        color: "#fff",
-        py: 6,
-        px: { xs: 3, md: 8 },
+        backgroundColor: "#000",
+        color: "#fff",  
         width: "100%",
         boxSizing: "border-box",
       }}
     >
       <Box
         sx={{
-          bgcolor: "#0B132B",
-          color: "#fff",
-          py: 6,
+          bgcolor: "#000",
+          color: "#fff", 
           width: "100%",
         }}
       >
@@ -32,8 +29,8 @@ function Footer() {
           spacing={16}
           sx={{
             maxWidth: "1200px",
-            margin: "0 auto",
-            px: { xs: 2, md: 0 },
+            padding: 4,
+            mt: 6,
           }}
         >
           {/* Company Info */}
@@ -110,7 +107,7 @@ function Footer() {
             pt: 2,
           }}
         >
-          <Typography variant="body2" sx={{ color: "#a9afc3" }}>
+          <Typography variant="body2" sx={{ color: "#a9afc3", pb: 2 }}>
             © 2025 MyCompany. All rights reserved.
           </Typography>
         </Box>

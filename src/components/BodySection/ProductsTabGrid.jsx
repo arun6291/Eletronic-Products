@@ -3,9 +3,15 @@ import { Box, Tabs, Tab, Typography, Grid, Rating } from "@mui/material";
 import { useState } from "react";
 import productsData from '../../data/productsData';
 import CustomButton from "../CustomButtons"; // 👈 your custom button
+import { useNavigate } from "react-router-dom"; // import this
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext"; // adjust path  
+
 
 function ProductTabsGrid() {
     const [selectedTab, setSelectedTab] = useState("All");
+    const navigate = useNavigate(); // initialize navigate
+    const { addToCart } = useContext(CartContext);
 
     const tabNames = ["All", "Headphones", "Earphones", "Earbuds", "Neckbands"];
 
@@ -84,10 +90,11 @@ function ProductTabsGrid() {
                                         sx={{
                                             textAlign: "center",
                                             background: '#161819',
-                                            maxWidth: 200,
+                                            width: '100%',
+                                            padding: 4,
                                         }}
                                     />
-                                    <div sx={{p: 4}}>
+                                    <Box sx={{ p: 2 }}>
                                         {/* ⭐ Rating directly under image */}
                                         <Rating
                                             name="read-only"
@@ -138,11 +145,17 @@ function ProductTabsGrid() {
                                         <CustomButton
                                             label={buttonText} // was 'text' before 
                                             variant={buttonText} // maps to color inside getColor()
-                                            sx={{ mt: 1, backgroundColor: "#d00404" }}
+                                            sx={{
+                                                mt: 1,
+                                                backgroundColor: "#d00404",
+                                            }}
+                                            onClick={() => {
+                                                addToCart(product);
+                                            }}
                                         >
                                             Add To Product
                                         </CustomButton>
-                                    </div>
+                                    </Box>
                                 </Box>
                             </Grid>
                         ))}
@@ -150,7 +163,7 @@ function ProductTabsGrid() {
                         {/* Browse All Products Card */}
                         <Grid item xs={2} sm={6} md={3}>
                             <Box
-                                onClick={() => navigate("/productfilter")} // replace with your target page
+                                onClick={() => navigate("/ProductFilterPage")} // replace with your target page
                                 sx={{
                                     textAlign: "center",
                                     color: "#a9afc3",

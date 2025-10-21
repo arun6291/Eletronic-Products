@@ -20,6 +20,8 @@ import {
   Divider,
 } from "@mui/material";
 import productsData from "../data/productsData";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer";
 
 const ProductsFilterPage = () => {
   const [sortType, setSortType] = useState("");
@@ -82,6 +84,8 @@ const ProductsFilterPage = () => {
   const uniqueCategories = ["All", ...new Set(productsData.map((p) => p.category))];
 
   return (
+    <>
+    <Header/>
     <Box sx={{ display: "flex", backgroundColor: "#111", color: "#fff", minHeight: "100vh" }}>
       {/* LEFT SIDEBAR */}
       <Box
@@ -230,6 +234,8 @@ const ProductsFilterPage = () => {
         </Grid>
       </Box>
     </Box>
+    <Footer/>
+    </>
   );
 };
 

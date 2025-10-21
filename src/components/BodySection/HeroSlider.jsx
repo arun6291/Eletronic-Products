@@ -5,9 +5,10 @@ import "slick-carousel/slick/slick-theme.css";
 import { Box, Grid, Card, CardMedia, CardContent, Typography, Button } from "@mui/material";
 import productsData from '../../data/productsData';
 import CustomButton from "../CustomButtons";
-
+import { useNavigate } from "react-router-dom";
 
 function HeroSlider() {
+  const navigate = useNavigate(); // ✅ define navigate here
   const buttonText = "Shop Now";
   const settings = {
     dots: true,
@@ -76,6 +77,7 @@ function HeroSlider() {
                   label={buttonText} // was 'text' before 
                   variant={buttonText} // maps to color inside getColor()
                   sx={{ mt: 1, backgroundColor: "#d00404" }}
+                  onClick={() => navigate(`/product/${product.id}`)}
                 >
                   View Product
                 </CustomButton>
