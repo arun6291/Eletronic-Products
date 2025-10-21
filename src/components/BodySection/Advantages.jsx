@@ -8,7 +8,7 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
     display: "flex",
     alignItems: "center",
-    background: '#000',
+    background: '#161819',
     justifyContent: "center",
     width: "100%",
     gap: theme.spacing(1.5),
@@ -29,7 +29,7 @@ function Advantages() {
     ];
 
     return (
-        <Box sx={{ flexGrow: 1, px: { xs: 2, md: 6 } }}>
+        <Box sx={{ flexGrow: 1, py: 8, pb: 12, bgcolor: '#161819', px: { xs: 2, md: 6 } }}>
             <Typography
                 variant="h2"
                 sx={{
@@ -49,6 +49,7 @@ function Advantages() {
                 sx={{
                     maxWidth: "1200px",
                     margin: "0 auto",
+                    background: '161819',
                     px: { xs: 2, md: 0 },
                 }}
             >

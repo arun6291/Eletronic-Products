@@ -4,6 +4,10 @@ export const headerStyles  = {
   appBar: {
     backgroundColor: "#000",
   },
+  icons: {
+    color: "#a9afc3"
+  },
+  
   heading: {
     color: "#a9afc3",
     py: 2,        // padding-top & padding-bottom

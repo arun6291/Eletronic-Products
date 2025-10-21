@@ -57,22 +57,29 @@ function HeroSlider() {
                     {product.info}
                   </Typography>
                 )} */}
-                <Typography variant="h6" sx={{ mb: 2, color: '#a9afc3' }}>
-                  ₹{product.finalPrice}
-                </Typography>
-
-                {product.originalPrice && (
+                <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 2 }}>
                   <Typography
-                    variant="h6"
-                    sx={{
-                      color: "#a9afc3",
-                      textDecoration: "line-through",
-                      fontWeight: 400,
-                    }}
+                    variant="h5"
+                    sx={{ color: '#a9afc3', fontWeight: 600 }}
                   >
-                    ₹{product.originalPrice}
+                    ₹{product.finalPrice}
                   </Typography>
-                )}
+
+                  {product.originalPrice && (
+                    <Typography
+                      variant="h5"
+                      sx={{
+                        color: "#6c757d",
+                        textDecoration: "line-through",
+                        fontWeight: 600,
+                        fontSize: "1rem",
+                      }}
+                    >
+                      ₹{product.originalPrice}
+                    </Typography>
+                  )}
+                </Box>
+
                 <CustomButton
                   label={buttonText} // was 'text' before 
                   variant={buttonText} // maps to color inside getColor()

@@ -65,9 +65,24 @@ function ProductTabsGrid() {
                         centered
                         textColor="inherit"
                         indicatorColor="secondary"
+                        // Remove underline indicator 
+                        sx={{
+                            borderBottom: "none", // removes border line
+                        }}
                     >
                         {tabNames.map(tab => (
-                            <Tab key={tab} label={tab} />
+                            <Tab key={tab} label={tab}
+                                sx={{
+                                    bgcolor: selectedTab === tab ? "#d00404" : "transparent", // selected tab bg
+                                    color: selectedTab === tab ? "#fff" : "#a9afc3",           // selected tab text
+                                    fontWeight: 500,
+                                    borderRadius: 1, 
+                                    mx: 1,
+                                    textTransform: "none",
+                                    "&:hover": {
+                                        bgcolor: selectedTab === tab ? "#d00404" : "#333", // hover effect
+                                    },
+                                }} />
                         ))}
                     </Tabs>
                 </Box>
@@ -146,14 +161,13 @@ function ProductTabsGrid() {
                                             label={buttonText} // was 'text' before 
                                             variant={buttonText} // maps to color inside getColor()
                                             sx={{
-                                                mt: 1,
+                                                mt: 1, 
                                                 backgroundColor: "#d00404",
                                             }}
                                             onClick={() => {
                                                 addToCart(product);
                                             }}
-                                        >
-                                            Add To Product
+                                        > 
                                         </CustomButton>
                                     </Box>
                                 </Box>

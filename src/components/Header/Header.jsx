@@ -46,7 +46,7 @@ function Header() {
                         </Link>
                     </Box>
 
-                    <IconButton size="large" aria-label="search" color="inherit">
+                    <IconButton size="large" aria-label="search" color="inherit" sx={headerStyles.icons}>
                         <SearchIcon />
                     </IconButton>
                      {/* Cart Button with Navigation */}
@@ -54,13 +54,14 @@ function Header() {
                         size="large"
                         aria-label="cart"
                         color="inherit"
+                        sx={headerStyles.icons}
                         onClick={() => navigate("/order-summary")}
                     >
                         <Badge badgeContent={itemCount} color="error">
                             <ShoppingCartIcon />
                         </Badge>
                     </IconButton>
-                    <IconButton size="large" color="inherit" onClick={handleOpen}>
+                    <IconButton size="large" color="inherit" sx={headerStyles.icons} onClick={handleOpen}>
                         <AccountCircle />
                     </IconButton>
                 </Toolbar>
