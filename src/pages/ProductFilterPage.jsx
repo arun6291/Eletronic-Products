@@ -97,17 +97,17 @@ const ProductsFilterPage = () => {
         }}
       >
         {/* SORT BY */}
-        <Typography variant="h6" gutterBottom sx={{ color: "#f44336" }}>
+        <Typography variant="h6" gutterBottom sx={{ color: "#a9afc3" }}>
           Sort By
         </Typography>
         <FormControl fullWidth variant="outlined" size="small" sx={{ mb: 3 }}>
-          <InputLabel sx={{ color: "#fff" }}>Select</InputLabel>
+          <InputLabel sx={{ color: "#a9afc3" }}>Select</InputLabel>
           <Select
             value={sortType}
             onChange={handleSortChange}
             label="Select"
             sx={{
-              color: "#fff",
+              color: "#a9afc3",
               "& .MuiOutlinedInput-notchedOutline": { borderColor: "#555" },
               "&:hover .MuiOutlinedInput-notchedOutline": { borderColor: "#f44336" },
             }}
@@ -123,7 +123,7 @@ const ProductsFilterPage = () => {
         <Divider sx={{ my: 2, backgroundColor: "#333" }} />
 
         {/* FILTER BY BRAND */}
-        <Typography variant="h6" gutterBottom sx={{ color: "#f44336" }}>
+        <Typography variant="h6" gutterBottom sx={{ color: "#a9afc3" }}>
           Filter By Brand
         </Typography>
         <FormGroup>
@@ -135,8 +135,8 @@ const ProductsFilterPage = () => {
                   checked={selectedBrands.includes(brand)}
                   onChange={() => handleBrandChange(brand)}
                   sx={{
-                    color: "#f44336",
-                    "&.Mui-checked": { color: "#f44336" },
+                    color: "#a9afc3",
+                    "&.Mui-checked": { color: "#a9afc3" },
                   }}
                 />
               }
@@ -148,7 +148,7 @@ const ProductsFilterPage = () => {
         <Divider sx={{ my: 2, backgroundColor: "#333" }} />
 
         {/* CATEGORY FILTER */}
-        <Typography variant="h6" gutterBottom sx={{ color: "#f44336" }}>
+        <Typography variant="h6" gutterBottom sx={{ color: "#a9afc3" }}>
           Category
         </Typography>
         <RadioGroup
@@ -163,8 +163,8 @@ const ProductsFilterPage = () => {
               control={
                 <Radio
                   sx={{
-                    color: "#f44336",
-                    "&.Mui-checked": { color: "#f44336" },
+                    color: "#a9afc3",
+                    "&.Mui-checked": { color: "#a9afc3" },
                   }}
                 />
               }
@@ -220,9 +220,9 @@ const ProductsFilterPage = () => {
                     variant="contained"
                     sx={{
                       mt: 2,
-                      backgroundColor: "#f44336",
+                      backgroundColor: "#d00404",
                       color: "#fff",
-                      "&:hover": { backgroundColor: "#d32f2f" },
+                      "&:hover": { backgroundColor: "#d00404" },
                     }}
                   >
                     Add to cart

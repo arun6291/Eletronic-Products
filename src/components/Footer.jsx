@@ -12,15 +12,14 @@ function Footer() {
       component="footer"
       sx={{
         backgroundColor: "#000",
-        color: "#fff",
+        color: "#a9afc3",
         width: "100%",
         boxSizing: "border-box",
       }}
     >
       <Box
-        sx={{
-          bgcolor: "#000",
-          color: "#fff",
+        sx={{ 
+          color: "#a9afc3",
           width: "100%",
         }}
       >
@@ -112,7 +111,7 @@ function Footer() {
           <Box
             component="footer"
             sx={{
-              backgroundColor: "#0d0d0d",
+              backgroundColor: "#000",
               color: "#a9afc3",
               py: 2,
               px: { xs: 2, md: 6 },
@@ -138,25 +137,25 @@ function Footer() {
             <Box sx={{ textAlign: { xs: "center", sm: "right" } }}>
               <IconButton
                 aria-label="Facebook"
-                sx={{ color: "#a9afc3", "&:hover": { color: "#1877f2" } }}
+                sx={{ color: "#a9afc3"}}
               >
                 <FacebookIcon />
               </IconButton>
               <IconButton
                 aria-label="Instagram"
-                sx={{ color: "#a9afc3", "&:hover": { color: "#e1306c" } }}
+                sx={{ color: "#a9afc3", }}
               >
                 <InstagramIcon />
               </IconButton>
               <IconButton
                 aria-label="Twitter"
-                sx={{ color: "#a9afc3", "&:hover": { color: "#1da1f2" } }}
+                sx={{ color: "#a9afc3" }}
               >
                 <TwitterIcon />
               </IconButton>
               <IconButton
                 aria-label="LinkedIn"
-                sx={{ color: "#a9afc3", "&:hover": { color: "#0a66c2" } }}
+                sx={{ color: "#a9afc3" }}
               >
                 <LinkedInIcon />
               </IconButton>
