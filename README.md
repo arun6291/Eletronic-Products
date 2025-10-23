@@ -15,7 +15,8 @@ Users can view details, add items to cart, and proceed to checkout — all with 
 
 🧰 JavaScript (ES6+), HTML5, CSS3
 
- 
+
+ ==========================================================
 🚀 Features
 
 📱 Fully responsive layout (mobile + desktop)
