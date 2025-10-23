@@ -1,3 +1,36 @@
+Electronic Products Store – React Project
+
+Overview
+
+A modern e-commerce web application built with React.js and Material-UI, focused on selling electronic gadgets and accessories.
+Users can view details, add items to cart, and proceed to checkout — all with a clean and responsive interface.
+
+⚙️ Tech Stack
+
+⚛️ React.js – Frontend library
+
+💅 Material-UI (MUI) – UI components and styling 
+
+🔄 Context API – State management for cart and user data
+
+🧰 JavaScript (ES6+), HTML5, CSS3
+
+ 
+🚀 Features
+
+📱 Fully responsive layout (mobile + desktop)
+
+🧩 Product filtering and sorting by category
+
+🛍️ Add to Cart, Remove, and Quantity management
+
+🔍 Product detail pages with images and ratings
+
+💳 Checkout page (can be integrated with payment gateway)
+
+
+A modern e-commerce web app built with React, Material-UI,
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
