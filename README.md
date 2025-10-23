@@ -17,6 +17,7 @@ Users can view details, add items to cart, and proceed to checkout — all with 
 
 
  ==========================================================
+ 
 🚀 Features
 
 📱 Fully responsive layout (mobile + desktop)
